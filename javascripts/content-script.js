@@ -1,5 +1,5 @@
 // slackなどで、以下の文字列でURLが区切られてしまうのでdecodeしないリスト
-const noDecodeChars = [' ', '　', '／', '・'];
+const noDecodeChars = [' ', '　', '／', '・', '（', '）'];
 const noDecodeTable = noDecodeChars.map(char => {
   return { originalRegExp: new RegExp(char, 'g'), encodedChar: encodeURIComponent(char) }
 });
